@@ -1,4 +1,36 @@
-mixin bedStatus(statuses)
-  .bed-status
-    each status in statuses
-      div.status= `${status.label} : ${status.count}`
+// Mixin untuk Header
+mixin customHeader(imageSrc, mainText, subText)
+  .custom-header
+    img(src=imageSrc alt="Medical equipment in a clean, modern room")
+    h1.custom-header-title
+      span= mainText
+      br
+      span= subText
+
+// Mixin untuk Description
+mixin customDescription(title, text)
+  .custom-description
+    h2.custom-description-title= title
+    p.custom-description-text= text
+
+// Mixin untuk Section
+mixin customSection(title, text)
+  .custom-section
+    h2.custom-section-title= title
+    p.custom-section-text= text
+
+// Mixin untuk Informasi Tambahan
+mixin customInfo(title, items)
+  .custom-info
+    h2.custom-info-title= title
+    ul.custom-info-list
+      each item in items
+        li= item
+
+// Mixin untuk Galeri
+mixin customGallery(images)
+  .custom-gallery
+    h2.custom-gallery-title Galeri
+    .custom-gallery-images
+      each image in images
+        img(src=image.src alt=image.alt)
