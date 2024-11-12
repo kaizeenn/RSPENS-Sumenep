@@ -1,0 +1,27 @@
+mixin videoBreadcrumb
+  .video-breadcrumb
+    a(href="#") Home
+    |  /
+    a(href="#") Berita & Artikel Kesehatan
+    |  /
+    a(href="#") Video
+
+mixin videoItem(videoSrc, title, description)
+  .video-item-container
+    iframe(src=videoSrc allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0")
+    .video-content
+      .video-title= title
+      .video-description= description
+
+mixin videoGrid
+  - 
+    var videos = [
+      { videoSrc: "https://www.youtube.com/embed/VIDEO_ID_1", title: "Pemulihan Saraf Dapat Lebih Cepat Dengan Transcranial Magnetic Stimulation (TMS)", description: "Pemulihan saraf yang lambat adalah masalah umum, tetapi ada solusi yaitu menggunakan Transcranial Magnetic Stimulation (TMS). Dalam video ini, kami akan membahas bagaimana TMS mengubah cara kita memahami dan memperlakukan gangguan saraf." },
+      { videoSrc: "https://www.youtube.com/embed/VIDEO_ID_2", title: "Pemulihan Saraf Dapat Lebih Cepat Dengan Transcranial Magnetic Stimulation (TMS)", description: "Pemulihan saraf yang lambat adalah masalah umum, tetapi ada solusi yaitu menggunakan Transcranial Magnetic Stimulation (TMS). Dalam video ini, kami akan membahas bagaimana TMS mengubah cara kita memahami dan memperlakukan gangguan saraf." },
+      { videoSrc: "https://www.youtube.com/embed/VIDEO_ID_3", title: "Pemulihan Saraf Dapat Lebih Cepat Dengan Transcranial Magnetic Stimulation (TMS)", description: "Pemulihan saraf yang lambat adalah masalah umum, tetapi ada solusi yaitu menggunakan Transcranial Magnetic Stimulation (TMS). Dalam video ini, kami akan membahas bagaimana TMS mengubah cara kita memahami dan memperlakukan gangguan saraf." },
+      { videoSrc: "https://www.youtube.com/embed/VIDEO_ID_4", title: "Pemulihan Saraf Dapat Lebih Cepat Dengan Transcranial Magnetic Stimulation (TMS)", description: "Pemulihan saraf yang lambat adalah masalah umum, tetapi ada solusi yaitu menggunakan Transcranial Magnetic Stimulation (TMS). Dalam video ini, kami akan membahas bagaimana TMS mengubah cara kita memahami dan memperlakukan gangguan saraf." }
+    ]
+  
+  .video-grid-container
+    each video in videos
+      +videoItem(video.videoSrc, video.title, video.description)

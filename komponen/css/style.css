@@ -1200,12 +1200,17 @@ h1.inpatient-title {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
+
 /* berita */
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
   padding: 20px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .news-card {
@@ -1217,12 +1222,16 @@ h1.inpatient-title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  margin: 0 auto;
 }
 
 .news-image {
   background-size: cover;
   background-position: center;
-  height: 200px;
+  height: 50%;
 }
 
 .news-content {
@@ -1230,6 +1239,7 @@ h1.inpatient-title {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex-grow: 1;
 }
 
 .news-date {
@@ -1246,11 +1256,12 @@ h1.inpatient-title {
 .news-description {
   font-size: 16px;
   color: #555555;
+  flex-grow: 1;
 }
 
 .news-link {
   align-self: flex-start;
-  margin-top: 10px;
+  margin-top: auto;
   padding: 8px 16px;
   background-color: #007bff;
   color: #ffffff;
@@ -1262,4 +1273,882 @@ h1.inpatient-title {
 
 .news-link:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Edukasi visual */
+.body-poli-clinic {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.education-container {
+  width: 40%; /* Reduced width for smaller display */
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.education-section {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.education-section img {
+  width: 100%;
+  height: auto;
+}
+
+.education-section p {
+  font-size: 14px; /* Reduced font size */
+  line-height: 1.6;
+  color: #333333;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px; /* Reduced padding */
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 12px; /* Reduced font size */
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+/* poli klinik */
+.body-poli-clinic {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.heading-poli {
+  color: #3b5998;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+.clinic-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.clinic-card {
+  background-color: #b0b0b0;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.clinic-card img {
+  width: 30px;
+  height: 30px;
+}
+
+.clinic-card .card-title {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.clinic-card .card-subtitle {
+  margin-top: 5px;
+}
+
+/* vidio */
+/* General Body Styling */
+.video-body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Container Styling */
+.video-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Breadcrumb Styling */
+.video-breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.video-breadcrumb a {
+  text-decoration: none;
+  color: #000;
+}
+
+.video-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Video Grid Styling */
+.video-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.video-item-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-item-container iframe {
+  width: 100%;
+  height: 315px;
+}
+
+/* Video Content Styling */
+.video-content {
+  padding: 15px;
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* artikel populer */
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main-section {
+  width: 60%;
+  margin-right: 20px;
+}
+
+.side-content {
+  width: 30%;
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+
+.breadcrumb-path {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.card-article {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-article img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666666;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.side-content-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.side-list {
+  list-style: none;
+  padding: 0;
+}
+
+.side-list-item {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+/* bicara sehat */
+
+.content-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.breadcrumb-path {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.news-section {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.news-section img {
+  width: 150px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.news-content {
+  max-width: calc(100% - 170px);
+}
+
+.news-heading {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.news-paragraph {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+}
+/* register */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-section {
+  width: 300px;
+  margin-right: 50px;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 14px;
+}
+
+.form-note {
+  font-size: 12px;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+/* .register-button {
+  background-color: #FF4500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+} */
+
+.login-redirect {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.login-redirect a {
+  color: #ff4500;
+  text-decoration: none;
+}
+
+.illustration-container img {
+  width: 200px;
+  height: auto;
+}
+/*laboratorium*/
+
+.content-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.breadcrumb-section {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.breadcrumb-section a {
+  color: #888;
+  text-decoration: none;
+}
+
+.breadcrumb-section a:hover {
+  text-decoration: underline;
+}
+
+.image-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-wrapper img {
+  width: 100%; /* Mengisi seluruh lebar container */
+  border-radius: 10px;
+}
+
+.image-caption {
+  position: relative;
+  top: -250px;
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.lab-details {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sub-section-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.description-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.lab-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.lab-list li {
+  margin-bottom: 5px;
+}
+
+.gallery-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.gallery-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.gallery-images img {
+  width: 30%;
+  margin: 0 1.5%;
+  border-radius: 10px;
+}
+/* raddiologi */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.header img {
+  width: 10000px; /* Ukuran tetap lebar 800px */
+  height: 400px; /* Ukuran tetap tinggi 400px */
+  object-fit: cover; /* Mengisi area tanpa mengubah proporsi */
+  border-radius: 10px;
+  max-width: 100%; /* Responsif di layar lebih kecil */
+}
+
+.header h1 {
+  color: #e74c3c;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.description h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.description p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.services {
+  margin-bottom: 20px;
+}
+
+.service-item {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.service-item-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  background-color: #f5f5f5;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Menambahkan jarak antar gambar di galeri */
+}
+
+.gallery-images img {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+}
+.service-item {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-item i {
+  transition: transform 0.3s ease; /* Animasi untuk ikon */
+}
+
+.service-item-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+  background-color: #f5f5f5;
+}
+.service-item {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-item i {
+  transition: transform 0.3s ease; /* Animasi rotasi ikon */
+}
+
+.service-item-content {
+  display: none; /* Tersembunyi secara default */
+  padding: 10px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+  background-color: #f5f5f5;
+}
+/* dropdown */
+.service-item {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-item label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.service-item i {
+  transition: transform 0.3s ease; /* Animasi rotasi ikon */
+}
+
+/* Sembunyikan checkbox */
+.toggle-checkbox {
+  display: none;
+}
+
+/* Konten dropdown, tersembunyi secara default */
+.service-item-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+  background-color: #f5f5f5;
+}
+
+/* Tampilkan konten dropdown jika checkbox tercentang */
+.toggle-checkbox:checked + label + .service-item-content {
+  display: block;
+}
+
+/* Rotasi ikon ketika konten dropdown terbuka */
+.toggle-checkbox:checked + label i {
+  transform: rotate(180deg);
+}
+/*medical check up */
+.header-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-section img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+.header-section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff0000;
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Text Content Section */
+.text-content {
+  margin-bottom: 40px;
+}
+
+.text-content .title {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Image Gallery Section */
+.image-gallery {
+  text-align: center;
+}
+
+.image-gallery .title {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.image-gallery img {
+  width: 30%;
+  height: auto;
+  margin: 0 1.5%;
+}
+/*gawat darurat*/
+.emergency-container {
+  padding: 20px;
+}
+
+.breadcrumb-section-emergency {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.breadcrumb-section-emergency a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb-section-emergency a:hover {
+  text-decoration: underline;
+}
+
+.image-wrapper-emergency {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-wrapper-emergency img {
+  width: 800px;
+  max-width: 600px;
+  height: 400px;
+}
+
+.image-caption-emergency {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+}
+
+.lab-details-emergency {
+  margin-top: 20px;
+}
+
+.section-title-emergency {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub-section-title-emergency {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description-text-emergency {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.lab-list-emergency {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.lab-list-emergency li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.gallery-section-emergency {
+  margin-top: 30px;
+}
+
+.gallery-title-emergency {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.gallery-images-emergency {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery-images-emergency img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* =================
+||medicalCheckup||
+================= */
+
+.custom-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.custom-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.custom-header img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.custom-header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-size: 36px;
+  margin: 0;
+}
+
+.custom-description,
+.custom-section,
+.custom-info,
+.custom-gallery {
+  margin-bottom: 40px;
+}
+
+.custom-description-title,
+.custom-section-title,
+.custom-info-title,
+.custom-gallery-title {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.custom-description-text,
+.custom-section-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.custom-info-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.custom-info-list li {
+  margin-bottom: 10px;
+}
+
+.custom-gallery {
+  text-align: center;
+}
+
+.custom-gallery-images img {
+  width: 30%;
+  height: auto;
+  margin: 0 10px;
 }
